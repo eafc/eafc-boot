@@ -41,20 +41,20 @@ public class SessionTest {
         Assert.assertTrue(SessionContext.hasClaim("key"));
         Assert.assertFalse(SessionContext.hasClaim("yyyy"));
 
-        Assert.assertEquals(SessionContext.getClaim("key"), "value");
+        Assert.assertEquals("value", SessionContext.getClaim("key"));
     }
 
     @Test
     public void testSessionContext() {
         this.initThreadSession();
 
-        Assert.assertEquals(SessionContext.getCountry(), COUNTRY);
-        Assert.assertEquals(SessionContext.getLanguage(), LANGUAGE);
-        Assert.assertEquals(SessionContext.getTimeZone(), TimeZone.getDefault());
-        Assert.assertEquals(SessionContext.getUserId(), USER_ID);
-        Assert.assertEquals(SessionContext.getTenantId(), TENANT_ID);
-        Assert.assertEquals(SessionContext.getAccount(), ACCOUNT);
-        Assert.assertEquals(SessionContext.getUserName(), USER_NAME);
+        Assert.assertEquals(COUNTRY, SessionContext.getCountry());
+        Assert.assertEquals(LANGUAGE, SessionContext.getLanguage());
+        Assert.assertEquals(TimeZone.getDefault(), SessionContext.getTimeZone());
+        Assert.assertEquals(USER_ID, SessionContext.getUserId());
+        Assert.assertEquals(TENANT_ID, SessionContext.getTenantId());
+        Assert.assertEquals(ACCOUNT, SessionContext.getAccount());
+        Assert.assertEquals(USER_NAME, SessionContext.getUserName());
     }
 
     private void initThreadSession() {
