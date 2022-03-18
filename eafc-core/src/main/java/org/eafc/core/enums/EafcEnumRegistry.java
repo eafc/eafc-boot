@@ -15,10 +15,10 @@ import java.util.stream.Collectors;
 @Slf4j
 public final class EafcEnumRegistry {
 
+    private static final ConcurrentHashMap<Class<? extends EafcEnum<?>>, Map<Object, EafcEnum<?>>> FULL_ENUM_MAP = new ConcurrentHashMap<>();
+
     private EafcEnumRegistry() {
     }
-
-    private static final ConcurrentHashMap<Class<? extends EafcEnum<?>>, Map<Object, EafcEnum<?>>> FULL_ENUM_MAP = new ConcurrentHashMap<>();
 
     public static boolean contains(Class<? extends EafcEnum<?>> enumClass) {
         return FULL_ENUM_MAP.containsKey(enumClass);

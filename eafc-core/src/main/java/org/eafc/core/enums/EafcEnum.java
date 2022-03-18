@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @author liuxx
  * @date 2022/3/16
  */
-public interface EafcEnum <T extends Serializable> {
+public interface EafcEnum<T extends Serializable> {
 
     /**
      * 枚举名，用于展示

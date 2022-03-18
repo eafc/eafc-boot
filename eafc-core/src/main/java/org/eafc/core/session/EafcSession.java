@@ -1,7 +1,7 @@
 package org.eafc.core.session;
 
 import lombok.Data;
-import org.springframework.util.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -63,7 +63,7 @@ public class EafcSession {
      * @return 是否包含
      */
     public boolean hasClaim(String key) {
-        return StringUtils.hasText(key) && this.claims.containsKey(key);
+        return StringUtils.isNotBlank(key) && this.claims.containsKey(key);
     }
 
     /**
@@ -73,7 +73,7 @@ public class EafcSession {
      * @return claim
      */
     public Object getClaim(String key) {
-        if (!StringUtils.hasText(key)) {
+        if (StringUtils.isBlank(key)) {
             return null;
         }
         return this.claims.get(key);
@@ -86,7 +86,7 @@ public class EafcSession {
      * @param value Value
      */
     public void setClaim(String key, Object value) {
-        if (!StringUtils.hasText(key)) {
+        if (StringUtils.isBlank(key)) {
             return;
         }
         this.claims.put(key, value);

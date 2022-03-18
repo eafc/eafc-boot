@@ -1,7 +1,7 @@
 package org.eafc.core.session;
 
+import org.apache.commons.lang3.StringUtils;
 import org.eafc.core.Constant;
-import org.springframework.util.StringUtils;
 
 import java.util.TimeZone;
 
@@ -23,6 +23,15 @@ public class SessionContext {
      */
     public static EafcSession getSession() {
         return LOCAL.get();
+    }
+
+    /**
+     * 设置线程 Session 信息
+     *
+     * @param session session
+     */
+    public static void setSession(EafcSession session) {
+        LOCAL.set(session);
     }
 
     /**
@@ -102,7 +111,7 @@ public class SessionContext {
      * @return 是否包含
      */
     public static boolean hasClaim(String key) {
-        if (!StringUtils.hasText(key)) {
+        if (StringUtils.isBlank(key)) {
             return false;
         }
 
@@ -117,20 +126,11 @@ public class SessionContext {
      * @return claim
      */
     public static Object getClaim(String key) {
-        if (!StringUtils.hasText(key)) {
+        if (StringUtils.isBlank(key)) {
             return null;
         }
         EafcSession session = getSession();
         return session == null ? null : session.getClaim(key);
-    }
-
-    /**
-     * 设置线程 Session 信息
-     *
-     * @param session session
-     */
-    public static void setSession(EafcSession session) {
-        LOCAL.set(session);
     }
 
     /**
