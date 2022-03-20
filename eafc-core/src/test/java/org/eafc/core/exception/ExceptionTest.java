@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * @author kayn.liu
+ * @author liuxx
  * @date 2022/3/16
  */
 public class ExceptionTest {
