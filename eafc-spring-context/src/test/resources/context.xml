@@ -5,4 +5,19 @@
 
     <!-- SpringContextHolder Bean -->
     <bean id="springContextHolder" class="org.eafc.spring.SpringContextHolder" />
+
+    <!-- HelloService Bean -->
+    <bean id="helloService" class="org.eafc.spring.beans.HelloServiceImpl" />
+
+    <bean id="beforeAdvice" class="org.eafc.spring.beans.aop.BeforeAdvice" />
+
+    <bean id="helloServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="proxyInterfaces" value="org.eafc.spring.beans.HelloService"/>
+        <property name="interceptorNames">
+            <list>
+                <value>beforeAdvice</value>
+            </list>
+        </property>
+        <property name="target" ref="helloService" />
+    </bean>
 </beans>
