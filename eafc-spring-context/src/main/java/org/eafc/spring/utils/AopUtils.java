@@ -10,7 +10,9 @@ import java.lang.reflect.Proxy;
  * @author liuxx
  * @date 2022/3/23
  */
-public class AopUtils {
+public final class AopUtils {
+
+    private AopUtils(){}
 
     /**
      * 获取 目标对象
@@ -40,14 +42,14 @@ public class AopUtils {
         return object != null && object.getClass().getName().contains("$$");
     }
 
-    private static Object getCglibProxyTargetObject(Object proxy) throws Exception {
+    private static Object getCglibProxyTargetObject(Object proxy) throws ReflectiveOperationException{
         Field h = proxy.getClass().getDeclaredField("CGLIB$CALLBACK_0");
         h.setAccessible(true);
         Object dynamicAdvisedInterceptor = h.get(proxy);
         return getProxyTargetObject(dynamicAdvisedInterceptor);
     }
 
-    private static Object getJdkDynamicProxyTargetObject(Object proxy) throws Exception {
+    private static Object getJdkDynamicProxyTargetObject(Object proxy) throws ReflectiveOperationException {
         Field h = proxy.getClass().getSuperclass().getDeclaredField("h");
         h.setAccessible(true);
         Object aopProxy = h.get(proxy);
