@@ -9,6 +9,7 @@
     <version>0.1.0-SNAPSHOT</version>
 
     <properties>
+        <eafc.version>0.1.0-SNAPSHOT</eafc.version>
         <spring-boot.version>2.5.10</spring-boot.version>
     </properties>
 
@@ -20,6 +21,16 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.eafc</groupId>
+                <artifactId>eafc-core</artifactId>
+                <version>${eafc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eafc</groupId>
+                <artifactId>eafc-spring-context</artifactId>
+                <version>${eafc.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

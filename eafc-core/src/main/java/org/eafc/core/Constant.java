@@ -7,4 +7,9 @@ package org.eafc.core;
 public interface Constant {
 
     String EMPTY = "";
+    String EQUAL = "=";
+    String COMMA = ",";
+
+    String LEFT_BRACE = "{";
+    String RIGHT_BRACE = "}";
 }

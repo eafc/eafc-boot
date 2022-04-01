@@ -20,4 +20,8 @@
         </property>
         <property name="target" ref="helloService" />
     </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="i18n.eafc"/>
+    </bean>
 </beans>
