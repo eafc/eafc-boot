@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Locale;
 
 /**
- * @author kayn.liu
+ * @author liuxx
  * @date 2022/4/1
  */
 public class LocaleUtilsTest {

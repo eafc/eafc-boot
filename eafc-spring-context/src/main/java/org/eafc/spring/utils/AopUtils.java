@@ -12,7 +12,8 @@ import java.lang.reflect.Proxy;
  */
 public final class AopUtils {
 
-    private AopUtils(){}
+    private AopUtils() {
+    }
 
     /**
      * 获取 目标对象
@@ -42,7 +43,7 @@ public final class AopUtils {
         return object != null && object.getClass().getName().contains("$$");
     }
 
-    private static Object getCglibProxyTargetObject(Object proxy) throws ReflectiveOperationException{
+    private static Object getCglibProxyTargetObject(Object proxy) throws ReflectiveOperationException {
         Field h = proxy.getClass().getDeclaredField("CGLIB$CALLBACK_0");
         h.setAccessible(true);
         Object dynamicAdvisedInterceptor = h.get(proxy);

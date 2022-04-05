@@ -4,12 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- SpringContextHolder Bean -->
-    <bean id="springContextHolder" class="org.eafc.spring.SpringContextHolder" />
+    <bean id="springContextHolder" class="org.eafc.spring.SpringContextHolder"/>
 
     <!-- HelloService Bean -->
-    <bean id="helloService" class="org.eafc.spring.beans.HelloServiceImpl" />
+    <bean id="helloService" class="org.eafc.spring.beans.HelloServiceImpl"/>
 
-    <bean id="beforeAdvice" class="org.eafc.spring.beans.aop.BeforeAdvice" />
+    <bean id="beforeAdvice" class="org.eafc.spring.beans.aop.BeforeAdvice"/>
 
     <bean id="helloServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="proxyInterfaces" value="org.eafc.spring.beans.HelloService"/>
@@ -18,7 +18,7 @@
                 <value>beforeAdvice</value>
             </list>
         </property>
-        <property name="target" ref="helloService" />
+        <property name="target" ref="helloService"/>
     </bean>
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
