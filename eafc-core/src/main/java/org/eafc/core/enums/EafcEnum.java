@@ -1,6 +1,7 @@
 package org.eafc.core.enums;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author liuxx
@@ -21,4 +22,14 @@ public interface EafcEnum<T extends Serializable> {
      * @return value
      */
     T getValue();
+
+    /**
+     * 值比较
+     *
+     * @param value 输入的 value
+     * @return 是否相等
+     */
+    default boolean equalsValue(T value) {
+        return Objects.equals(value, this.getValue());
+    }
 }

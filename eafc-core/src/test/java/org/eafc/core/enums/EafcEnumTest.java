@@ -22,6 +22,7 @@ public class EafcEnumTest {
         Assert.assertEquals(TestEnum.SUCCESS.getValue(), eafcEnum.getValue());
         Assert.assertEquals(TestEnum.SUCCESS.getName(), eafcEnum.getName());
         Assert.assertEquals(TestEnum.SUCCESS, eafcEnum);
+        Assert.assertTrue(TestEnum.SUCCESS.equalsValue("success"));
 
         Map<Object, EafcEnum<?>> enumMap = EafcEnumRegistry.getEnums(TestEnum.class);
         Assert.assertEquals(TestEnum.values().length, enumMap.size());
