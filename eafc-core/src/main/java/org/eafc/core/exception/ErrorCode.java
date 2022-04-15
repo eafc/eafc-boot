@@ -17,7 +17,7 @@ public enum ErrorCode implements IErrorCode {
     /**
      * 成功
      */
-    SUCCESS("00000", "一切OK"),
+    SUCCESS("00000", "success"),
 
     /**
      * 用户类异常

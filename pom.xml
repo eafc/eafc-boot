@@ -12,6 +12,7 @@
         <module>eafc-dependencies</module>
         <module>eafc-core</module>
         <module>eafc-spring-context</module>
+        <module>eafc-web-support</module>
     </modules>
 
     <properties>
