@@ -28,8 +28,8 @@ import java.util.Optional;
 @ControllerAdvice
 public class GlobalExceptionAdvice {
 
-    private final static String DEFAULT_ERROR_MASSAGE = "系统走神了,请稍候再试.";
-    private final static String ARGUMENT_ERROR_MESSAGE = "非法的参数";
+    private static final String DEFAULT_ERROR_MASSAGE = "系统走神了,请稍候再试.";
+    private static final String ARGUMENT_ERROR_MESSAGE = "非法的参数";
 
     /**
      * 校验类异常处理
@@ -45,7 +45,7 @@ public class GlobalExceptionAdvice {
         FieldError fieldError = ex.getBindingResult().getFieldError();
         if (fieldError != null && StringUtils.isBlank(fieldError.getDefaultMessage())) {
             String defaultMessage = fieldError.getDefaultMessage();
-            if (StringUtils.contains(defaultMessage, IllegalArgumentException.class.getName())) {
+            if (StringUtils.isNotBlank(defaultMessage) && defaultMessage.contains(IllegalArgumentException.class.getName())) {
                 message = defaultMessage.substring(defaultMessage.lastIndexOf(":") + 2);
             }
         }
