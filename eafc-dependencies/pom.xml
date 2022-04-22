@@ -10,7 +10,7 @@
 
     <properties>
         <eafc.version>0.1.0-SNAPSHOT</eafc.version>
-        <spring-boot.version>2.5.10</spring-boot.version>
+        <spring-boot.version>2.5.13</spring-boot.version>
     </properties>
 
     <dependencyManagement>
