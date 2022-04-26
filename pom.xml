@@ -13,6 +13,7 @@
         <module>eafc-core</module>
         <module>eafc-spring-context</module>
         <module>eafc-web-support</module>
+        <module>eafc-service-support</module>
     </modules>
 
     <properties>

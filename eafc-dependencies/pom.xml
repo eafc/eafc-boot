@@ -11,6 +11,7 @@
     <properties>
         <eafc.version>0.1.0-SNAPSHOT</eafc.version>
         <spring-boot.version>2.5.13</spring-boot.version>
+        <mybatisplus.version>3.5.1</mybatisplus.version>
     </properties>
 
     <dependencyManagement>
@@ -31,6 +32,23 @@
                 <groupId>org.eafc</groupId>
                 <artifactId>eafc-spring-context</artifactId>
                 <version>${eafc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eafc</groupId>
+                <artifactId>eafc-service-support</artifactId>
+                <version>${eafc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eafc</groupId>
+                <artifactId>eafc-web-support</artifactId>
+                <version>${eafc.version}</version>
+            </dependency>
+
+            <!-- 添加mybatis-plus依赖 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
