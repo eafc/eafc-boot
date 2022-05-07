@@ -1,4 +1,4 @@
-package org.eafc.service.support.entity;
+package org.eafc.service.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;

@@ -1,4 +1,4 @@
-package org.eafc.web.support.utils;
+package org.eafc.web.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;

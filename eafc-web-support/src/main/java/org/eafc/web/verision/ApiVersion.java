@@ -1,4 +1,4 @@
-package org.eafc.web.support.verision;
+package org.eafc.web.verision;
 
 import org.springframework.web.bind.annotation.Mapping;
 

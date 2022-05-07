@@ -1,4 +1,4 @@
-package org.eafc.service.support.entity;
+package org.eafc.service.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -12,7 +12,7 @@ import lombok.Setter;
  */
 @Getter @Setter
 @EqualsAndHashCode(callSuper = true)
-public abstract class LongFullPO extends LongPO implements IHasCreatedBy, IHasUpdatedBy {
+public abstract class StringFullPO extends StringPO implements IHasCreatedBy, IHasUpdatedBy {
 
     @TableField(fill = FieldFill.INSERT)
     private String createdBy;

@@ -1,4 +1,4 @@
-package org.eafc.service.support.entity;
+package org.eafc.service.entity;
 
 import java.io.Serializable;
 

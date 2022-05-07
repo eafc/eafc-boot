@@ -1,4 +1,4 @@
-package org.eafc.web.support.verision;
+package org.eafc.web.verision;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.annotation.AnnotatedElementUtils;

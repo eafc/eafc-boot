@@ -1,4 +1,4 @@
-package org.eafc.service.support.entity;
+package org.eafc.service.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -13,12 +13,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 @Getter @Setter
 @EqualsAndHashCode
-public abstract class LongPurePO implements IPO<Long> {
+public abstract class StringPurePO implements IPO<String> {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(type = IdType.AUTO)
-    private Long id;
+    @TableId(type = IdType.ASSIGN_UUID)
+    private String id;
 
     @Override
     public String toString() {

@@ -1,4 +1,4 @@
-package org.eafc.web.support.advice;
+package org.eafc.web.advice;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
