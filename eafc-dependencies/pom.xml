@@ -35,6 +35,11 @@
             </dependency>
             <dependency>
                 <groupId>org.eafc</groupId>
+                <artifactId>eafc-spring-boot-starter</artifactId>
+                <version>${eafc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eafc</groupId>
                 <artifactId>eafc-service-support</artifactId>
                 <version>${eafc.version}</version>
             </dependency>

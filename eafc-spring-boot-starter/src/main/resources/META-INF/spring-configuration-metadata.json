@@ -1,0 +1,58 @@
+{
+  "groups": [
+    {
+      "name": "eafc.service",
+      "type": "org.eafc.spring.autoconfigure.service.ServiceProperties",
+      "sourceType": "org.eafc.spring.autoconfigure.service.ServiceProperties"
+    },
+    {
+      "name": "eafc.web",
+      "type": "org.eafc.spring.autoconfigure.web.WebProperties",
+      "sourceType": "org.eafc.spring.autoconfigure.web.WebProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "eafc.service.audit-meta-object",
+      "type": "java.lang.Boolean",
+      "description": "是否开启 审计字段自动填充",
+      "sourceType": "org.eafc.spring.autoconfigure.service.ServiceProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "eafc.service.block-attack",
+      "type": "java.lang.Boolean",
+      "description": "是否开启 防止全表更新与删除",
+      "sourceType": "org.eafc.spring.autoconfigure.service.ServiceProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "eafc.service.optimistic-lock-check",
+      "type": "java.lang.Boolean",
+      "description": "是否开启 乐观锁检测",
+      "sourceType": "org.eafc.spring.autoconfigure.service.ServiceProperties"
+    },
+    {
+      "name": "eafc.web.base-packages",
+      "type": "java.lang.String[]",
+      "description": "包路径",
+      "sourceType": "org.eafc.spring.autoconfigure.web.WebProperties",
+      "defaultValue": []
+    },
+    {
+      "name": "eafc.web.global-exception-enable",
+      "type": "java.lang.Boolean",
+      "description": "是否开启全局异常处理",
+      "sourceType": "org.eafc.spring.autoconfigure.web.WebProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "eafc.web.json-wrapper-enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启全局结果包装器",
+      "sourceType": "org.eafc.spring.autoconfigure.web.WebProperties",
+      "defaultValue": true
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration = \
+  org.eafc.spring.autoconfigure.EafcContextAutoConfiguration,\
+  org.eafc.spring.autoconfigure.web.WebAutoConfiguration,\
+  org.eafc.spring.autoconfigure.service.ServiceAutoConfiguration

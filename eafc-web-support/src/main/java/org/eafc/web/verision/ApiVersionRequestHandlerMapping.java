@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 /**
  * @author liuxx
- * @since 2020/6/11
+ * @since 2022/6/17
  */
 public class ApiVersionRequestHandlerMapping extends RequestMappingHandlerMapping {
 
