@@ -11,7 +11,7 @@ import java.util.Locale;
  * @author liuxx
  * @date 2022/4/1
  */
-public class LocaleUtilsTest {
+public class TranslateUtilsTest {
 
     private static final String MESSAGE_CODE = "eafc.hello";
     private static final String HELLO_EN = "Hello eafc.";
@@ -24,10 +24,10 @@ public class LocaleUtilsTest {
         new ClassPathXmlApplicationContext("classpath:/context.xml");
 
         LocaleContextHolder.setLocale(Locale.US);
-        Assert.assertEquals(HELLO_EN, LocaleUtils.locale(MESSAGE_CODE));
+        Assert.assertEquals(HELLO_EN, TranslateUtils.translate(MESSAGE_CODE));
 
         LocaleContextHolder.setLocale(Locale.SIMPLIFIED_CHINESE);
-        Assert.assertEquals(HELLO_CN, LocaleUtils.locale(MESSAGE_CODE));
+        Assert.assertEquals(HELLO_CN, TranslateUtils.translate(MESSAGE_CODE));
     }
 
     @Test
@@ -35,9 +35,9 @@ public class LocaleUtilsTest {
         new ClassPathXmlApplicationContext("classpath:/context.xml");
 
         LocaleContextHolder.setLocale(Locale.US);
-        Assert.assertEquals("1 + 2 = 3", LocaleUtils.localeWrapper(MESSAGE_WRAPPER));
+        Assert.assertEquals("1 + 2 = 3", TranslateUtils.translateWrapper(MESSAGE_WRAPPER));
 
         LocaleContextHolder.setLocale(Locale.SIMPLIFIED_CHINESE);
-        Assert.assertEquals("1 加 2 等于 3", LocaleUtils.localeWrapper(MESSAGE_WRAPPER));
+        Assert.assertEquals("1 加 2 等于 3", TranslateUtils.translateWrapper(MESSAGE_WRAPPER));
     }
 }

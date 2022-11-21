@@ -15,22 +15,22 @@ import java.util.Locale;
  * @date 2022/3/31
  */
 @Slf4j
-public final class LocaleUtils {
+public final class TranslateUtils {
 
     private static final Object[] EMPTY_ARRAY = {};
     private static final int MSG_TOKEN_LENGTH = 2;
 
-    private LocaleUtils() {
+    private TranslateUtils() {
     }
 
     /**
-     * locale
+     * translate
      *
      * @param messageCode key of message source
      * @param params      replaced params
      * @return locale value
      */
-    public static String locale(String messageCode, Object... params) {
+    public static String translate(String messageCode, Object... params) {
         if (!StringUtils.hasText(messageCode)) {
             return messageCode;
         }
@@ -52,7 +52,7 @@ public final class LocaleUtils {
      * @param message wrapped message, eg: {a.x}=1,2
      * @return locale value
      */
-    public static String localeWrapper(String message) {
+    public static String translateWrapper(String message) {
         if (!StringUtils.startsWithIgnoreCase(message, Constant.LEFT_BRACE)) {
             return message;
         }
@@ -62,7 +62,7 @@ public final class LocaleUtils {
         if (msg.startsWith(Constant.LEFT_BRACE) && msg.endsWith(Constant.RIGHT_BRACE)) {
             String messageCode = msg.substring(1, msg.length() - 1);
             Object[] params = buildParams(msgToken);
-            return locale(messageCode, params);
+            return translate(messageCode, params);
         }
         return message;
     }
